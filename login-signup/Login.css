@@ -1,0 +1,113 @@
+body {
+  background-size: cover;
+  font-size: 16px;
+  background-position-y: -60;
+}
+
+#wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form-login {
+  max-width: 400px;
+  background: rgba(234, 210, 145, 0.8);
+  flex-grow: 1;
+  padding: 30px 30px 40px;
+  position: relative;
+  z-index: 10;
+}
+
+.form-heading {
+  font-size: 36px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form-group i {
+  padding-top: 5px;
+  padding-right: 10px;
+  font-size: 20px;
+  color: #000;
+}
+
+.form-group {
+  border-bottom: 1px solid #0b0707;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-input {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: #000;
+  padding-right: 30px;
+}
+
+.form-input::placeholder {
+  color: #44433d;
+}
+
+#togglePassword {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.text-center.p-t-90 {
+  text-align: center;
+  padding-top: 10px;
+}
+.txt1 {
+  font-size: 15px;
+  color: #0b0707;
+}
+
+/*footer*/
+footer {
+  color: #0b0707;
+  font-size: 20px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
+
+footer a {
+  text-decoration: none;
+  font-size: large;
+  color: #fff;
+}
+
+/*button*/
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-login {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
