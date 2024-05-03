@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./Meals.module.css";
+import MealItem from "./MealItem.jsx";
 
 const Meals = () => {
   const [loadedMeals, setLoadedMeals] = useState([]);
@@ -21,7 +22,7 @@ const Meals = () => {
   return (
     <ul className={styles.meals}>
       {loadedMeals.map((meal) => (
-        <li id={meal.id}>{meal.name}</li>
+        <MealItem key={meal.id} meal={meal} />
       ))}
     </ul>
   );
