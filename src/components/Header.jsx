@@ -1,5 +1,6 @@
 import styles from "./Header.module.css";
 import brand from "/brand.png";
+import Button from "./UI/Button";
 
 const Header = () => {
   return (
@@ -10,8 +11,8 @@ const Header = () => {
       </div>
 
       <nav>
-        <button>Cart (0)</button>
-        <button>Login</button>
+        <Button textOnly>Cart (0)</Button>
+        <Button textOnly>Login</Button>
       </nav>
     </header>
   );
