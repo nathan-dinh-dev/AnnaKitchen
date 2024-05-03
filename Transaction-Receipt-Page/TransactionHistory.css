@@ -24,37 +24,32 @@ body {
   margin-right: 5px;
   font-family: cursive;
 }
-
 main {
   padding: 10rem;
-  text-align: center;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 0 auto;
+.checkout-details {
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: #f6e2bf;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-thead {
-  background-color: #f07e14;
-  color: #fff;
-}
-thead th {
-  text-align: center;
+h2 {
+  color: #333;
+  margin-bottom: 1rem;
 }
 
-th,
-td {
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  text-align: center;
+.detail {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
 }
 
-tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
+.detail span:first-child {
+  font-weight: bold;
 }
-
 /*footer*/
 footer {
   color: #0b0707;
