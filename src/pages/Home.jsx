@@ -1,5 +1,11 @@
+import Meals from "../components/Meals";
+
 const Home = () => {
-  return <></>;
+  return (
+    <>
+      <Meals />
+    </>
+  );
 };
 
 export default Home;
