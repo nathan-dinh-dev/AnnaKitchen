@@ -42,6 +42,9 @@
             class="form-input"
             placeholder="Password"
             id="password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}"
+            title="Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character, and be at least 8 characters long."
+            required
           />
         </div>
         <div class="form-group">
@@ -54,6 +57,9 @@
             required
           />
         </div>
+        <p id="passwordMatchError" style="color: rgb(156, 6, 6); display: none">
+          Passwords do not match. Please try again.
+        </p>
         <div class="text-center p-t-90">
           <a class="txt1" href="Login.html"> Login </a>
         </div>
@@ -96,5 +102,36 @@
         });
     </script>
 
+    <script>
+      document
+        .getElementById("confirmPassword")
+        .addEventListener("input", function (event) {
+          var password = document.getElementById("password").value;
+          var confirmPassword = event.target.value;
+          var passwordMatchError =
+            document.getElementById("passwordMatchError");
+
+          if (password !== confirmPassword) {
+            passwordMatchError.style.display = "block";
+          } else {
+            passwordMatchError.style.display = "none";
+          }
+        });
+
+      document
+        .getElementById("form-login")
+        .addEventListener("submit", function (event) {
+          var password = document.getElementById("password").value;
+          var confirmPassword =
+            document.getElementById("confirmPassword").value;
+          var passwordMatchError =
+            document.getElementById("passwordMatchError");
+
+          if (password !== confirmPassword) {
+            event.preventDefault();
+            passwordMatchError.style.display = "block";
+          }
+        });
+    </script>
   </body>
 </html>
