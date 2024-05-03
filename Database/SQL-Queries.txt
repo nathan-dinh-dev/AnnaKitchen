@@ -1,0 +1,101 @@
+CREATE TABLE Menu (
+    ItemID INT AUTO_INCREMENT PRIMARY KEY,
+    Category VARCHAR(50),
+    ItemName VARCHAR(100),
+    Description TEXT,
+    Price DECIMAL(10, 2),
+    Image VARCHAR(255)
+    /*Image BLOB*/
+);
+/*
+INSERT INTO Menu (Category, ItemName, Description, Price, Image)
+VALUES
+    ('Appetizer', 'Egg Roll', 'Pork & Shrimp rolls with sauce', 9.99, NULL),
+    ('Appetizer', 'Spring Roll-Grilled Pork', 'Grilled pork sausage with vermicelli and fresh herbs wrapped in rice paper w/ dipping sauce', 9.99, NULL),
+    ('Main Course', 'Pho', 'Slow simmered beef bone broth served with rice noodles, bean sprouts, jalapeno peppers, cilantro, basil, green and white onions.', 15.99, NULL),
+    ('Main Course', 'Pork & Mushrooms Roll Set', 'Pork & mushroom rolls, Vietnamese ham, & shrimp & sweet potato fritter', 13.95, NULL),
+    ('Main Course', 'Fried Rice', 'House special rice with shrimp and Vietnamese ham', 13.95, NULL),
+    ('Main Course', 'Garlic Noodles – Vegetarian', 'Stir-fried garlic noodles with tofu & organic varietal mushrooms', 13.50, NULL),
+    ('Main Course', 'Rice with Pork Chop', 'Grilled Pork Chop served served with steamed white rice and fresh vegetables', 14.95, NULL),
+    ('Main Course', 'Vietnameses Pancake', 'Vietnamese crispy crepe with mushroom & tofu', 11.95, NULL),
+    ('Dessert', 'Chocolate Lava Cake', 'Decadent chocolate cake with a molten chocolate center, served with vanilla ice cream.', 7.99, NULL),
+    ('Drinks', 'Mojito', 'Classic Cuban cocktail made with rum, mint, lime, sugar, and soda water.', 8.99, NULL),
+    ('Drinks', 'Matcha Vietnamese Coffee', 'Vietnamese Coffee infused with fresh matcha', 5.75, NULL),
+    ('Drinks', 'Vietnamese Iced Coffee', 'Slow dripped Vietnamese Coffee with condensed milk', 5.75, NULL),
+    ('Drinks', 'Thai Tea', 'Sweetened ceylon tea with half & half', 5.25, NULL),
+    ('Drinks', 'Strawberry Peach Black Tea', 'Strawberry & peach infused black tea', 5.99, NULL);
+*/ 
+
+
+INSERT INTO Menu (Category, ItemName, Description, Price, Image)
+VALUES 
+('Appetizer', 'Egg Roll', 'Pork & Shrimp rolls with sauce', 9.99, ‘’),
+('Appetizer', 'Spring Roll-Grilled Pork', 'Grilled pork sausage with vermicelli and fresh herbs wrapped in rice paper w/ dipping sauce', 9.99, ''),
+('Appetizer', 'Caesar Salad', 'Romaine lettuce tossed in Caesar dressing, topped with croutons and parmesan shavings.', 7.99, '');
+
+
+INSERT INTO Menu (Category, ItemName, Description, Price, Image)
+VALUES 
+('Main Course', 'Pho', 'Slow simmered beef bone broth served with rice noodles, bean sprouts, jalapeno peppers, cilantro, basil, green and white onions.', 15.99, ''),
+('Main Course', 'Pork & Mushrooms Roll Set', 'Pork & mushroom rolls, Vietnamese ham, & shrimp & sweet potato fritter', 13.95, ''),
+('Main Course', 'Fried Rice', 'House special rice with shrimp and Vietnamese ham', 13.95, ''),
+('Main Course', 'Garlic Noodles – Vegetarian', 'Stir-fried garlic noodles with tofu & organic varietal mushrooms', 13.50, ''),
+('Main Course', 'Rice with Pork Chop', 'Grilled Pork Chop served served with steamed white rice and fresh vegetables', 14.95, ''),
+('Main Course', 'Vietnameses Pancake', 'Vietnamese crispy crepe with mushroom & tofu', 11.95, ''),
+('Main Course', 'Mac & Cheese', 'Creamy cheddar cheese mixed with perfectly cooked macaroni, topped with crispy breadcrumbs. A classic comfort food.', 8.99, ''),
+('Main Course', 'Margherita Pizza', 'A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.', 12.99, ''),
+('Main Course', 'Spaghetti Carbonara', 'Al dente spaghetti with a creamy sauce made from egg yolk, pecorino cheese, pancetta, and pepper.', 10.99, ''),
+('Main Course', 'Veggie Burger', 'A juicy veggie patty served on a whole grain bun with lettuce, tomato, and a tangy sauce.', 9.99, ''),
+('Main Course', 'Grilled Chicken Sandwich', 'Tender grilled chicken breast with avocado, bacon, lettuce, and honey mustard on a toasted bun.', 10.99, ''),
+('Main Course', 'Steak Frites', 'Succulent steak cooked to your preference, served with crispy golden fries and herb butter.', 17.99, ''),
+('Main Course', 'Sushi Roll Platter', 'An assortment of fresh sushi rolls including California, Spicy Tuna, and Eel Avocado.', 15.99, ''),
+('Main Course', 'Chicken Curry', 'Tender pieces of chicken simmered in a rich and aromatic curry sauce, served with basmati rice.', 13.99, ''),
+('Main Course', 'Vegan Buddha Bowl', 'A hearty bowl filled with quinoa, roasted veggies, avocado, and a tahini dressing.', 11.99, ''),
+('Main Course', 'Seafood Paella', 'A Spanish delicacy filled with saffron-infused rice, shrimp, mussels, and chorizo.', 19.99, ''),
+('Main Course', 'Miso Ramen', 'A warming bowl of ramen with miso broth, tender pork, soft-boiled egg, and green onions.', 12.99, ''),
+('Main Course', 'Beef Tacos', 'Three soft tortillas filled with seasoned beef, fresh salsa, cheese, and sour cream.', 9.99, ''),
+('Main Course', 'Mushroom Risotto', 'Creamy Arborio rice cooked with a medley of wild mushrooms and finished with parmesan.', 13.99, ''),
+('Main Course', 'Eggplant Parmesan', 'Layers of breaded eggplant, marinara sauce, and melted mozzarella and parmesan cheeses.', 11.99, ''),
+('Main Course', 'Falafel Wrap', 'Crispy falafels wrapped in a warm pita with lettuce, tomatoes, and a tahini sauce.', 8.99, '');
+
+
+INSERT INTO Menu (Category, ItemName, Description, Price, Image)
+VALUES 
+('Dessert', 'Chocolate Lava Cake', 'Decadent chocolate cake with a molten chocolate center, served with vanilla ice cream.', 7.99, ''),
+('Dessert', 'Pancake Stack', 'Fluffy pancakes stacked high, drizzled with maple syrup and topped with fresh berries.', 8.99, ''),
+('Dessert', 'Chocolate Brownie', 'A rich and fudgy brownie, topped with a scoop of vanilla ice cream and chocolate sauce.', 5.99, ''),
+('Dessert', 'Lemon Cheesecake', 'A creamy cheesecake with a tangy lemon flavor, served on a crumbly biscuit base.', 6.99, '');
+
+
+INSERT INTO Menu (Category, ItemName, Description, Price, Image)
+VALUES 
+('Drinks', 'Mojito', 'Classic Cuban cocktail made with rum, mint, lime, sugar, and soda water.', 8.99, ''),
+('Drinks', 'Matcha Vietnamese Coffee', 'Vietnamese Coffee infused with fresh matcha', 5.75, ''),
+('Drinks', 'Vietnamese Iced Coffee', 'Slow dripped Vietnamese Coffee with condensed milk', 5.75, ''),
+('Drinks', 'Thai Tea', 'Sweetened ceylon tea with half & half', 5.25, ''),
+('Drinks', 'Strawberry Peach Black Tea', 'Strawberry & peach infused black tea', 5.99, '');
+ 
+
+CREATE TABLE Customer (
+    CustomerID INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50),
+    hashpassword VARCHAR(255)
+);
+
+CREATE TABLE Transaction (
+    TransactionID INT AUTO_INCREMENT PRIMARY KEY,
+    UserID INT,
+    Date DATE,
+    Total DECIMAL(10, 2),
+    FOREIGN KEY (UserID) REFERENCES Customer(CustomerID)
+);
+
+
+CREATE TABLE Receipt (
+    ReceiptID INT AUTO_INCREMENT PRIMARY KEY,
+    TransactionID INT,
+    ItemID INT,
+    Quantity INT,
+    FOREIGN KEY (TransactionID) REFERENCES Transaction(TransactionID),
+    FOREIGN KEY (ItemID) REFERENCES Menu(ItemID)
+);
