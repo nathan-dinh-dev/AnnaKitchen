@@ -1,0 +1,78 @@
+body {
+  background: url("receiptpage.png");
+  background-size: cover;
+  background-position: absolute;
+}
+
+body,
+table {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.name {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: rgb(3, 3, 3);
+  font-size: 80px;
+  margin-right: 5px;
+  font-family: cursive;
+}
+
+main {
+  padding: 10rem;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+thead {
+  background-color: #f07e14;
+  color: #fff;
+}
+thead th {
+  text-align: center;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/*footer*/
+footer {
+  color: #0b0707;
+  font-size: 20px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+  padding: 0.3rem;
+  background: rgba(231, 177, 106, 0.86);
+}
+footer a {
+  font-size: large;
+  color: #cc4502;
+}
+
+footer a:hover {
+  color: #f8f4ef;
+}
