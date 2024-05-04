@@ -1,7 +1,7 @@
 import styles from "./MealItem.module.css";
-import { currencyFormatter } from "../util/formatting";
-import Button from "./UI/Button.jsx";
-import CartContext from "../store/CartContext.jsx";
+import { currencyFormatter } from "../../util/formatting.js";
+import Button from "../UI/Button.jsx";
+import CartContext from "../../store/CartContext.jsx";
 import { useContext } from "react";
 
 const MealItem = ({ meal }) => {

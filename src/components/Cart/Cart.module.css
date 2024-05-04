@@ -1,0 +1,33 @@
+.cart h2 {
+  margin: 1rem 0;
+}
+
+.cart ul {
+  list-style: none;
+  margin: 0.5rem 0;
+  padding: 0;
+}
+
+.cart__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.cart__actions button {
+  color: #1d1a16;
+}
+
+.cart__actions button:hover,
+.cart__actions button:active {
+  color: #312c1d;
+}
+
+.cart__total {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2rem 0;
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #46443c;
+}
