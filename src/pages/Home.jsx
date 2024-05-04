@@ -1,4 +1,5 @@
 import Cart from "../components/Cart/Cart.jsx";
+import Checkout from "../components/Checkout/Checkout.jsx";
 import Meals from "../components/Meal/Meals.jsx";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <>
       <Meals />
       <Cart />
+      <Checkout />
     </>
   );
 };

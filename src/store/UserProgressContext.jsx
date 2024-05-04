@@ -18,7 +18,7 @@ const modalReducer = (state, action) => {
   }
 
   if (action.type === "OPEN_CHECKOUT") {
-    return { ...state, progress: "" };
+    return { ...state, progress: "checkout" };
   }
   return state;
 };
