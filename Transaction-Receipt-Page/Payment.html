@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Payment.css" />
+    <link rel="icon" type="image/png" href="Anna’s Kitchen.png" />
+
+    <title>Custoomer Login</title>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="heading">
+          <h1>Payment Information</h1>
+        </div>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Name" />
+        <br />
+        <label for="card">Card Number</label>
+        <input
+          type="text"
+          minlength="16"
+          maxlength="16"
+          id="card"
+          name="card"
+          placeholder="0000 0000 0000 0000"
+        />
+        <br />
+        <div class="exp-cvc">
+          <div class="expiration">
+            <label for="expiry">Expiration <data></data>ate</label>
+            <input
+              class="inputCard"
+              name="expiry"
+              id="expiry"
+              type="text"
+              required
+              placeholder="00/00"
+            />
+            <br />
+          </div>
+          <div class="security">
+            <label for="cvc">CVC</label>
+            <input
+              type="text"
+              minlength="3"
+              maxlength="4"
+              id="cvc"
+              name="cvc"
+              placeholder="XXX"
+            />
+            <br />
+          </div>
+        </div>
+        <div class="button-container">
+          <a href="####.html"></a>
+          <button class="button-login">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Go back to the <a href="HomePage.html">Homepage</a></p>
+    </footer>
+  </body>
+</html>

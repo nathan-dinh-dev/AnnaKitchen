@@ -1,0 +1,151 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("background.png");
+  font-family: inter, sans-serif;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  margin-top: 80px;
+  margin-bottom: 80px;
+
+  position: relative;
+  width: 48vw;
+  height: auto;
+
+  border-radius: 16px;
+  background-color: rgb(237, 201, 236);
+
+  border: 2px solid #1b1b1b;
+  box-sizing: border-box;
+  box-shadow: 6px 6px 0px #1b1b1b;
+  border-radius: 8px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+label {
+  font-weight: 600;
+}
+
+input {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 10px;
+  padding: 16px 24px;
+  width: 90%;
+  height: 15%;
+  left: 1048px;
+  top: 16px;
+  background: #fefdff;
+  border: 2px solid #1b1b1b;
+  box-sizing: border-box;
+  border-radius: 16px;
+  transition: 0.2s;
+}
+
+.exp-cvc {
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.expiration {
+  font-size: 0.75rem;
+  width: 50%;
+  margin-right: 20px;
+}
+
+.security {
+  font-size: 0.75rem;
+  width: 50%;
+  margin-left: 20px;
+}
+
+span {
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-login {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-login:hover {
+  background-color: #fff;
+}
+
+.button-login:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-login {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+/*footer*/
+footer {
+  color: #0b0707;
+  font-size: 20px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
+footer a {
+  font-size: large;
+  color: #cc4502;
+}
+
+footer a:hover {
+  color: #f8f4ef;
+}
