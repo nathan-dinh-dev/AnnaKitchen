@@ -1,7 +1,8 @@
 body {
   background: url("receiptpage.png");
   background-size: cover;
-  background-position: absolute;
+  font-size: 26px;
+  background-position-y: -60;
 }
 
 body,
@@ -34,6 +35,8 @@ main {
   border-radius: 10px;
   background-color: #f6e2bf;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 h2 {
