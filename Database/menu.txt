@@ -1,0 +1,9 @@
+CREATE TABLE Menu (
+    ItemID INT AUTO_INCREMENT PRIMARY KEY,
+    Category VARCHAR(50),
+    ItemName VARCHAR(100),
+    Description TEXT,
+    Price DECIMAL(10, 2),
+    Image VARCHAR(255)
+    /*Image BLOB*/
+);
