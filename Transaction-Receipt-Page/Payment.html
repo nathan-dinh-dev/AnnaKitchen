@@ -58,10 +58,33 @@
         </div>
         <div class="button-container">
           <a href="####.html"></a>
-          <button class="button-login">Submit</button>
+          <button
+            id="confirmButton"
+            class="button-submit"
+            onclick="confirmAction()"
+          >
+            Submit
+          </button>
         </div>
       </div>
     </div>
+
+    <script>
+      function confirmAction() {
+        var button = document.getElementById("confirmButton");
+        if (button.classList.contains("done")) {
+          alert("Already confirmed!");
+        } else {
+          var confirm = window.confirm(
+            "Are you sure you want to use this card?"
+          );
+          if (confirm) {
+            button.innerText = "Done";
+            button.classList.add("done");
+          }
+        }
+      }
+    </script>
 
     <footer>
       <p>Go back to the <a href="HomePage.html">Homepage</a></p>
