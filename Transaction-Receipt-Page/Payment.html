@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Payment.css" />
     <link rel="icon" type="image/png" href="Anna’s Kitchen.png" />
-
-    <title>Custoomer Login</title>
+    <title>Customer Login</title>
   </head>
 
   <body>
@@ -19,6 +18,14 @@
 
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Name" />
+        <br />
+        <label for="address">Address</label>
+        <input
+          type="text"
+          id="address"
+          name="address"
+          placeholder="Street address"
+        />
         <br />
         <label for="card">Card Number</label>
         <input
@@ -32,7 +39,7 @@
         <br />
         <div class="exp-cvc">
           <div class="expiration">
-            <label for="expiry">Expiration <data></data>ate</label>
+            <label for="expiry">Expiration Date</label>
             <input
               class="inputCard"
               name="expiry"
@@ -57,13 +64,20 @@
           </div>
         </div>
         <div class="button-container">
-          <a href="####.html"></a>
           <button
             id="confirmButton"
             class="button-submit"
             onclick="confirmAction()"
           >
-            Submit
+            Confirm Payment
+          </button>
+          <button
+            id="orderHistoryButton"
+            class="button-submit"
+            style="display: none"
+            onclick="goToOrderHistory()"
+          >
+            View Order History
           </button>
         </div>
       </div>
@@ -73,16 +87,19 @@
       function confirmAction() {
         var button = document.getElementById("confirmButton");
         if (button.classList.contains("done")) {
-          alert("Already confirmed!");
+          alert("Your item ordered successfully!!! Thank you");
+          document.getElementById("orderHistoryButton").style.display = "block"; // Show the order history button
         } else {
-          var confirm = window.confirm(
-            "Are you sure you want to use this card?"
-          );
+          var confirm = window.confirm("Are you sure you want to confirm?");
           if (confirm) {
             button.innerText = "Done";
             button.classList.add("done");
           }
         }
+      }
+
+      function goToOrderHistory() {
+        window.location.href = "TransactionHistory.html";
       }
     </script>
 
