@@ -1,10 +1,12 @@
 body {
   display: flex;
   align-items: center;
-  justify-content: center;
   background: url("background.png");
   font-family: inter, sans-serif;
   background-size: cover;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .container {
@@ -35,7 +37,7 @@ body {
 .heading {
   display: flex;
   flex-direction: row;
-  text-align: center;
+  padding-left: 150px;
 }
 
 h1 {
@@ -73,13 +75,11 @@ input {
 }
 
 .expiration {
-  font-size: 0.75rem;
   width: 50%;
   margin-right: 20px;
 }
 
 .security {
-  font-size: 0.75rem;
   width: 50%;
   margin-left: 20px;
 }
@@ -112,10 +112,11 @@ span {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  margin-right: 40px; /* Add margin between buttons */
 }
 
 .button-submit:hover {
-  background-color: #fff;
+  background-color: #cd91e4f0;
 }
 
 .button-submit:active {
@@ -131,14 +132,13 @@ span {
 }
 
 .button-submit.done {
-  background-color: #28a74692;
+  background-color: #5ac38b;
 }
 
 .button-submit.done::after {
   content: "\2713"; /* Checkmark symbol */
   margin-left: 5px;
 }
-
 
 footer {
   color: #0b0707;
