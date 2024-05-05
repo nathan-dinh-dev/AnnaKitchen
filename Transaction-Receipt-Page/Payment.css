@@ -95,14 +95,14 @@ span {
   align-items: center;
 }
 
-.button-login {
+.button-submit {
   background-color: #fbeee0;
   border: 2px solid #422800;
   border-radius: 30px;
-  box-shadow: #422800 4px 4px 0 0;
+  box-shadow: #090909 4px 4px 0 0;
   color: #422800;
   cursor: pointer;
-  display: inline-block;
+  display: flex;
   font-weight: 600;
   font-size: 18px;
   padding: 0 18px;
@@ -114,23 +114,32 @@ span {
   touch-action: manipulation;
 }
 
-.button-login:hover {
+.button-submit:hover {
   background-color: #fff;
 }
 
-.button-login:active {
-  box-shadow: #422800 2px 2px 0 0;
+.button-submit:active {
+  box-shadow: #090909 2px 2px 0 0;
   transform: translate(2px, 2px);
 }
 
 @media (min-width: 768px) {
-  .button-login {
+  .button-submit {
     min-width: 120px;
     padding: 0 25px;
   }
 }
 
-/*footer*/
+.button-submit.done {
+  background-color: #28a74692;
+}
+
+.button-submit.done::after {
+  content: "\2713"; /* Checkmark symbol */
+  margin-left: 5px;
+}
+
+
 footer {
   color: #0b0707;
   font-size: 20px;
