@@ -1,3 +1,16 @@
+.checkout__type h3 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.checkout__type select {
+  height: 2rem;
+  padding: 0 1rem 0 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font: inherit;
+}
+
 .checkout__row {
   display: flex;
   justify-content: flex-start;
