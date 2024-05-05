@@ -1,0 +1,9 @@
+/* này có thể có trích cho order history*/
+CREATE TABLE Receipt (
+    ReceiptID INT AUTO_INCREMENT PRIMARY KEY,
+    TransactionID INT,
+    ItemID INT,
+    Quantity INT,
+    FOREIGN KEY (TransactionID) REFERENCES Transaction(TransactionID),
+    FOREIGN KEY (ItemID) REFERENCES Menu(ItemID)
+);
