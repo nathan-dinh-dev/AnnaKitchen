@@ -1,0 +1,5 @@
+CREATE TABLE Customer (
+    CustomerID INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50),
+    hashpassword VARCHAR(255)
+);
