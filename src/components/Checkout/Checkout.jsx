@@ -25,6 +25,21 @@ const Checkout = () => {
     event.preventDefault();
     const fd = new FormData(event.target);
     const customerData = Object.fromEntries(fd.entries());
+
+    fetch("http://localhost:5000/order-confirmed", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        order: {
+          customer: customerData,
+          transaction: cartTotal,
+          items: ctx.items,
+          total: cartTotal,
+        },
+      }),
+    });
   };
 
   const orderTypeHandler = (event) => {
@@ -39,7 +54,7 @@ const Checkout = () => {
       <form action="" onSubmit={submitHandler}>
         <h2>Checkout</h2>
         <p>Total Amount: {currencyFormatter.format(cartTotal)}</p>
-        <Input label="Full Name" type="text" id="full-name" required />
+        <Input label="Full Name" type="text" id="name" required />
         <Input label="Email Address" type="email" id="email" required />
 
         <div className={styles["checkout__type"]}>
@@ -56,10 +71,15 @@ const Checkout = () => {
         </div>
         {orderType === "delivery" ? (
           <>
-            <Input label="Street" type="text" id="street" />
+            <Input label="Street" type="text" id="street" required />
             <div className={styles["checkout__row"]}>
-              <Input label="Postal Code" type="text" id="postal-code" />
-              <Input label="City" type="text" id="city" />
+              <Input
+                label="Postal Code"
+                type="text"
+                id="postal-code"
+                required
+              />
+              <Input label="City" type="text" id="city" required />
             </div>
           </>
         ) : (
