@@ -134,7 +134,7 @@ footer a:hover {
   cursor: pointer;
   display: inline-block;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 15px;
   padding: 0 18px;
   line-height: 50px;
   text-align: center;
@@ -158,4 +158,9 @@ footer a:hover {
     min-width: 120px;
     padding: 0 25px;
   }
+}
+
+.button-container a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color */
 }
