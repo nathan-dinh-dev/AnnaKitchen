@@ -32,9 +32,10 @@ orderConfirmedRouter.post("/order-confirmed", (req, res) => {
             <ul>
               ${data.items.map(
                 (item) =>
-                  `<li>${item.name} ${item.price} | qty: ${item.quantity}</li>`
+                  `<li>${item.name} $${item.price} | qty: ${item.quantity}</li>`
               )}
-              <li>Total: ${data.total}</li>
+              <br>
+              <p><b>Total:</b> $${data.total}</p>
             </ul>
             <h3>Message</h3>
             <p>Thank You! See You Again!</p>`,

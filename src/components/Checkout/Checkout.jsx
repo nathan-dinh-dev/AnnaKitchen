@@ -6,6 +6,8 @@ import Input from "../UI/Input.jsx";
 import Button from "../UI/Button.jsx";
 import UserProgressContext from "../../store/UserProgressContext.jsx";
 import styles from "./Checkout.module.css";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const Checkout = () => {
   const ctx = useContext(CartContext);
@@ -21,25 +23,54 @@ const Checkout = () => {
     userProgressCtx.hideCheckout();
   };
 
-  const submitHandler = (event) => {
+  const submitHandler = async (event) => {
     event.preventDefault();
+    const id = toast.loading("Sending Order...");
     const fd = new FormData(event.target);
     const customerData = Object.fromEntries(fd.entries());
 
-    fetch("http://localhost:5000/order-confirmed", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
+    try {
+      const url = "http://localhost:5000/order-confirmed";
+      const data = {
         order: {
           customer: customerData,
           transaction: cartTotal,
           items: ctx.items,
           total: cartTotal,
         },
-      }),
-    });
+      };
+      // Specifying headers in the config object
+      const config = { "content-type": "application/json" };
+
+      const response = await axios.post(url, data, config);
+      console.log(response.data);
+
+      if (response.status === 200) {
+        toast.update(id, {
+          render: "Order Confirmed!",
+          type: "success",
+          isLoading: false,
+          autoClose: 800,
+          closeOnClick: true,
+          pauseOnFocusLoss: false,
+          pauseOnHover: false,
+        });
+
+        userProgressCtx.hideCheckout();
+        ctx.removeAllItem();
+      }
+    } catch (error) {
+      toast.update(id, {
+        render: "Failed to Order!",
+        type: "error",
+        isLoading: false,
+        autoClose: 800,
+        closeOnClick: true,
+        pauseOnFocusLoss: false,
+        pauseOnHover: false,
+      });
+      console.log(error);
+    }
   };
 
   const orderTypeHandler = (event) => {
