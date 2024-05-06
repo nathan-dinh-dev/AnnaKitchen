@@ -9,7 +9,7 @@ orderConfirmedRouter.post("/order-confirmed", (req, res) => {
   if (data.customer.length === 0 || data.items.length === 0) {
     return res.status(400).json({ msg: "Missing Data" });
   }
-  console.log("Inhere");
+
   let smtpTransporter = nodemailer.createTransport({
     service: "Gmail",
     port: 465,
@@ -31,7 +31,8 @@ orderConfirmedRouter.post("/order-confirmed", (req, res) => {
             <h3>Receipt</h3>
             <ul>
               ${data.items.map(
-                (item) => `<li>${item.name} ${item.price}x${item.quantity}</li>`
+                (item) =>
+                  `<li>${item.name} ${item.price} | qty: ${item.quantity}</li>`
               )}
               <li>Total: ${data.total}</li>
             </ul>
