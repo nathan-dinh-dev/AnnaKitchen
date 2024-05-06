@@ -1,12 +1,15 @@
-import fs from "node:fs/promises";
 import bodyParser from "body-parser";
 import express from "express";
+import menuRouter from "./route/menuRoute.js";
+import orderConfirmedRouter from "./route/orderConfirmedRoute.js";
+import cors from "cors";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 app.use(express.static("public"));
+app.use(cors());
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -15,10 +18,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/meals", async (req, res) => {
-  const meals = await fs.readFile("./data/available-meals.json", "utf8");
-  res.json(JSON.parse(meals));
-});
+app.use("/", menuRouter);
+app.use("/", orderConfirmedRouter);
 
 app.use((req, res) => {
   if (req.method === "OPTIONS") {
