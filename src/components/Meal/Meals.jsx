@@ -8,8 +8,8 @@ const Meals = () => {
 
   useEffect(() => {
     async function fetchMeals() {
-      const menu = await axios.get("http://localhost:5000/meals");
-      setLoadedMeals(menu.data);
+      const menu = await axios.get("http://localhost:5000/menu");
+      setLoadedMeals(menu.data.data);
     }
 
     fetchMeals();

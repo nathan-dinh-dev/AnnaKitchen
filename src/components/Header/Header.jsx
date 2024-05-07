@@ -50,7 +50,7 @@ const Header = () => {
           }
         >
           <Button textOnly type="button" onClick={logoutHandler}>
-            Profile
+            History Order
           </Button>
         </div>
 

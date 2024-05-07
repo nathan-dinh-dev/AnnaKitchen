@@ -6,6 +6,7 @@ const orderConfirmedRouter = express.Router();
 
 orderConfirmedRouter.post("/order-confirmed", (req, res) => {
   let data = req.body.order;
+
   if (data.customer.length === 0 || data.items.length === 0) {
     return res.status(400).json({ msg: "Missing Data" });
   }
