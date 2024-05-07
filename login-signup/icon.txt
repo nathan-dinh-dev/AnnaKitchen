@@ -1,0 +1,8 @@
+<FontAwesomeIcon icon={faUser} />
+<FontAwesomeIcon icon={faKey} />
+<FontAwesomeIcon icon={faEye} />
+<FontAwesomeIcon icon={faEyeSlash} />
+<FontAwesomeIcon icon={faRotateRight} />
+<FontAwesomeIcon icon={faGithub} bounce />
+<FontAwesomeIcon icon={faGoogle} bounce />
+
