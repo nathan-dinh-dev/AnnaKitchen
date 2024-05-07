@@ -1,11 +1,6 @@
 CREATE TABLE Transaction (
     TransactionID INT AUTO_INCREMENT PRIMARY KEY,
     UserID INT,
-    Name VARCHAR(50),
-    Address VARCHAR(255),
-    CardNumber VARCHAR(20),
-    ExpirationDate VARCHAR(10),
-    CVC VARCHAR(4),
     Date DATETIME,
     Total DECIMAL(10, 2),
     FOREIGN KEY (UserID) REFERENCES Customer(CustomerID)
