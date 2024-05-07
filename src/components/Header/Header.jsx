@@ -49,7 +49,11 @@ const Header = () => {
               : styles["dropdown-content"]
           }
         >
-          <Button textOnly type="button" onClick={logoutHandler}>
+          <Button
+            textOnly
+            type="button"
+            onClick={() => naivigate("/my-transactions")}
+          >
             History Order
           </Button>
         </div>

@@ -6,6 +6,7 @@ import Login from "./pages/Login.jsx";
 import { CartContextProvider } from "./store/CartContext.jsx";
 import { UserProgressContextProvider } from "./store/UserProgressContext.jsx";
 import { AccountContextProvider } from "./store/AccountContext.jsx";
+import TransactionHistory from "./pages/TransactionHistory.jsx";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       { path: "/login", element: <Login /> },
+      { path: "/my-transactions", element: <TransactionHistory /> },
     ],
   },
 ]);

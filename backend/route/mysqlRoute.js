@@ -51,8 +51,8 @@ mysqlRouter.get("/largest-trans-id", (req, res) => {
 
 mysqlRouter.get("/my-transactions", (req, res) => {
   const db = new DbService();
-
-  const result = db.getAllData("transaction");
+  const userID = req.query.userID;
+  const result = db.getMyTransactions(userID);
 
   result
     .then((data) => res.json({ data: data }))

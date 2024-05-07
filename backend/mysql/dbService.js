@@ -45,11 +45,11 @@ class DbService {
     }
   }
 
-  async getMyTransactions(UserID) {
+  async getMyTransactions(userID) {
     try {
       const [results, fields] = await connection.query(
         "SELECT * FROM `transaction` WHERE `UserID` = ?",
-        [UserID]
+        [userID]
       );
       return results;
     } catch (err) {
