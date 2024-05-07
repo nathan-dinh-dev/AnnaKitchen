@@ -1,0 +1,93 @@
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("login.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.form-login {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(234, 210, 145, 0.8);
+  padding: 30px 40px;
+}
+
+.form-heading {
+  font-size: 36px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form-group {
+  border-bottom: 1px solid #0b0707;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-input {
+  background: transparent;
+  border: 0 !important;
+  outline: 0 !important;
+}
+
+.form-input::placeholder {
+  color: #44433d;
+}
+
+.form__signup {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.form__signup a {
+  font-size: 15px;
+  color: #0b0707;
+}
+
+.form-actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.button-login {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-login:hover {
+  background-color: #fff;
+}
+
+.button-login:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-login {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}

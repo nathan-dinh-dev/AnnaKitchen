@@ -8,10 +8,13 @@ import UserProgressContext from "../../store/UserProgressContext.jsx";
 import styles from "./Checkout.module.css";
 import axios from "axios";
 import { toast } from "react-toastify";
+import AccountContext from "../../store/AccountContext.jsx";
 
 const Checkout = () => {
   const ctx = useContext(CartContext);
   const userProgressCtx = useContext(UserProgressContext);
+  const accountCtx = useContext(AccountContext);
+
   const [orderType, setOrderType] = useState("pickup");
 
   const cartTotal = ctx.items.reduce(
@@ -27,7 +30,14 @@ const Checkout = () => {
     event.preventDefault();
     const id = toast.loading("Sending Order...");
     const fd = new FormData(event.target);
-    const customerData = Object.fromEntries(fd.entries());
+
+    let customerData = Object.fromEntries(fd.entries());
+
+    if (accountCtx.user)
+      customerData = {
+        name: accountCtx.user.displayName,
+        email: accountCtx.user.email,
+      };
 
     try {
       const url = "http://localhost:5000/order-confirmed";
@@ -77,6 +87,14 @@ const Checkout = () => {
     setOrderType(event.target.value);
   };
 
+  const autofilledName = accountCtx.user
+    ? { value: accountCtx.user.displayName, disabled: true }
+    : "";
+
+  const autofilledEmail = accountCtx.user
+    ? { value: accountCtx.user.email, disabled: true }
+    : "";
+
   return (
     <Modal
       open={userProgressCtx.progress === "checkout"}
@@ -85,8 +103,21 @@ const Checkout = () => {
       <form action="" onSubmit={submitHandler}>
         <h2>Checkout</h2>
         <p>Total Amount: {currencyFormatter.format(cartTotal)}</p>
-        <Input label="Full Name" type="text" id="name" required />
-        <Input label="Email Address" type="email" id="email" required />
+        <Input
+          label="Full Name"
+          type="text"
+          id="name"
+          required
+          {...autofilledName}
+        />
+
+        <Input
+          label="Email Address"
+          type="email"
+          id="email"
+          required
+          {...autofilledEmail}
+        />
 
         <div className={styles["checkout__type"]}>
           <h3>Order Type</h3>

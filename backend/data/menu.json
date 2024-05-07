@@ -1,0 +1,274 @@
+[
+  {
+    "id": 1,
+    "category": "Appetizer",
+    "name": "Egg Roll",
+    "description": "Pork & Shrimp rolls with sauce",
+    "price": 9.99,
+    "image": "food-images/eggroll.png"
+  },
+  {
+    "id": 2,
+    "category": "Appetizer",
+    "name": "Spring Roll-Grilled Pork",
+    "description": "Grilled pork sausage with vermicelli and fresh herbs wrapped in rice paper w/ dipping sauce",
+    "price": 9.99,
+    "image": "food-images/Spring Roll-Grilled Pork.jpg"
+  },
+  {
+    "id": 3,
+    "category": "Appetizer",
+    "name": "Caesar Salad",
+    "description": "Romaine lettuce tossed in Caesar dressing, topped with croutons and parmesan shavings.",
+    "price": 7.99,
+    "image": "images/caesar-salad.jpg"
+  },
+  {
+    "id": 4,
+    "category": "Main Course",
+    "name": "Pho",
+    "description": "Slow simmered beef bone broth served with rice noodles, bean sprouts, jalapeno peppers, cilantro, basil, green and white onions.",
+    "price": 15.99,
+    "image": "food-images/Pho.jpg"
+  },
+  {
+    "id": 5,
+    "category": "Main Course",
+    "name": "Pork & Mushrooms Roll Set",
+    "description": "Pork & mushroom rolls, Vietnamese ham, & shrimp & sweet potato fritter",
+    "price": 13.95,
+    "image": "food-images/Pork-Mushrooms-Roll-Set.jpg"
+  },
+  {
+    "id": 6,
+    "category": "Main Course",
+    "name": "Fried Rice",
+    "description": "House special rice with shrimp and Vietnamese ham",
+    "price": 13.95,
+    "image": "food-images/Fried-Rice.jpg"
+  },
+  {
+    "id": 7,
+    "category": "Main Course",
+    "name": "Garlic Noodles \u2013 Vegetarian",
+    "description": "Stir-fried garlic noodles with tofu & organic varietal mushrooms",
+    "price": 13.5,
+    "image": "food-images/Garlic-Noodles \u2013 Vegetarian.jpg"
+  },
+  {
+    "id": 8,
+    "category": "Main Course",
+    "name": "Rice with Pork Chop",
+    "description": "Grilled Pork Chop served served with steamed white rice and fresh vegetables",
+    "price": 14.95,
+    "image": "food-images/Rice-with-Pork-Chop.jpg"
+  },
+  {
+    "id": 9,
+    "category": "Main Course",
+    "name": "Vietnameses Pancake",
+    "description": "Vietnamese crispy crepe with mushroom & tofu",
+    "price": 11.95,
+    "image": "food-images/Vietnameses-Pancake.jpg"
+  },
+  {
+    "id": 10,
+    "category": "Main Course",
+    "name": "Mac & Cheese",
+    "description": "Creamy cheddar cheese mixed with perfectly cooked macaroni, topped with crispy breadcrumbs. A classic comfort food.",
+    "price": 8.99,
+    "image": "images/mac-and-cheese.jpg"
+  },
+  {
+    "id": 11,
+    "category": "Main Course",
+    "name": "Margherita Pizza",
+    "description": "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
+    "price": 12.99,
+    "image": "images/margherita-pizza.jpg"
+  },
+  {
+    "id": 12,
+    "category": "Main Course",
+    "name": "Spaghetti Carbonara",
+    "description": "Al dente spaghetti with a creamy sauce made from egg yolk, pecorino cheese, pancetta, and pepper.",
+    "price": 10.99,
+    "image": "images/spaghetti-carbonara.jpg"
+  },
+  {
+    "id": 13,
+    "category": "Main Course",
+    "name": "Veggie Burger",
+    "description": "A juicy veggie patty served on a whole grain bun with lettuce, tomato, and a tangy sauce.",
+    "price": 9.99,
+    "image": "images/veggie-burger.jpg"
+  },
+  {
+    "id": 14,
+    "category": "Main Course",
+    "name": "Grilled Chicken Sandwich",
+    "description": "Tender grilled chicken breast with avocado, bacon, lettuce, and honey mustard on a toasted bun.",
+    "price": 10.99,
+    "image": "images/grilled-chicken-sandwich.jpg"
+  },
+  {
+    "id": 15,
+    "category": "Main Course",
+    "name": "Steak Frites",
+    "description": "Succulent steak cooked to your preference, served with crispy golden fries and herb butter.",
+    "price": 17.99,
+    "image": "images/steak-frites.jpg"
+  },
+  {
+    "id": 16,
+    "category": "Main Course",
+    "name": "Sushi Roll Platter",
+    "description": "An assortment of fresh sushi rolls including California, Spicy Tuna, and Eel Avocado.",
+    "price": 15.99,
+    "image": "images/sushi-roll-platter.jpg"
+  },
+  {
+    "id": 17,
+    "category": "Main Course",
+    "name": "Chicken Curry",
+    "description": "Tender pieces of chicken simmered in a rich and aromatic curry sauce, served with basmati rice.",
+    "price": 13.99,
+    "image": "images/chicken-curry.jpg"
+  },
+  {
+    "id": 18,
+    "category": "Main Course",
+    "name": "Vegan Buddha Bowl",
+    "description": "A hearty bowl filled with quinoa, roasted veggies, avocado, and a tahini dressing.",
+    "price": 11.99,
+    "image": "images/vegan-buddha-bowl.jpg"
+  },
+  {
+    "id": 19,
+    "category": "Main Course",
+    "name": "Seafood Paella",
+    "description": "A Spanish delicacy filled with saffron-infused rice, shrimp, mussels, and chorizo.",
+    "price": 19.99,
+    "image": "images/seafood-paella.jpg"
+  },
+  {
+    "id": 20,
+    "category": "Main Course",
+    "name": "Miso Ramen",
+    "description": "A warming bowl of ramen with miso broth, tender pork, soft-boiled egg, and green onions.",
+    "price": 12.99,
+    "image": "images/miso-ramen.jpg"
+  },
+  {
+    "id": 21,
+    "category": "Main Course",
+    "name": "Beef Tacos",
+    "description": "Three soft tortillas filled with seasoned beef, fresh salsa, cheese, and sour cream.",
+    "price": 9.99,
+    "image": "images/beef-tacos.jpg"
+  },
+  {
+    "id": 22,
+    "category": "Main Course",
+    "name": "Mushroom Risotto",
+    "description": "Creamy Arborio rice cooked with a medley of wild mushrooms and finished with parmesan.",
+    "price": 13.99,
+    "image": "images/mushroom-risotto.jpg"
+  },
+  {
+    "id": 23,
+    "category": "Main Course",
+    "name": "Eggplant Parmesan",
+    "description": "Layers of breaded eggplant, marinara sauce, and melted mozzarella and parmesan cheeses.",
+    "price": 11.99,
+    "image": "images/eggplant-parmesan.jpg"
+  },
+  {
+    "id": 24,
+    "category": "Main Course",
+    "name": "Falafel Wrap",
+    "description": "Crispy falafels wrapped in a warm pita with lettuce, tomatoes, and a tahini sauce.",
+    "price": 8.99,
+    "image": "images/falafel-wrap.jpg"
+  },
+  {
+    "id": 25,
+    "category": "Main Course",
+    "name": "Lobster Bisque",
+    "description": "A creamy soup made from lobster stock, aromatic vegetables, and a touch of brandy.",
+    "price": 14.99,
+    "image": "images/lobster-bisque.jpg"
+  },
+  {
+    "id": 26,
+    "category": "Dessert",
+    "name": "Pancake Stack",
+    "description": "Fluffy pancakes stacked high, drizzled with maple syrup and topped with fresh berries.",
+    "price": 8.99,
+    "image": "images/pancake-stack.jpg"
+  },
+  {
+    "id": 27,
+    "category": "Dessert",
+    "name": "Chocolate Brownie",
+    "description": "A rich and fudgy brownie, topped with a scoop of vanilla ice cream and chocolate sauce.",
+    "price": 5.99,
+    "image": "images/chocolate-brownie.jpg"
+  },
+  {
+    "id": 28,
+    "category": "Dessert",
+    "name": "Lemon Cheesecake",
+    "description": "A creamy cheesecake with a tangy lemon flavor, served on a crumbly biscuit base.",
+    "price": 6.99,
+    "image": "images/lemon-cheesecake.jpg"
+  },
+  {
+    "id": 29,
+    "category": "Dessert",
+    "name": "Chocolate Lava Cake",
+    "description": "Decadent chocolate cake with a molten chocolate center, served with vanilla ice cream.",
+    "price": 7.99,
+    "image": "food-images/Chocolate-Lava-Cake.jpg"
+  },
+  {
+    "id": 30,
+    "category": "Drinks",
+    "name": "Mojito",
+    "description": "Classic Cuban cocktail made with rum, mint, lime, sugar, and soda water.",
+    "price": 8.99,
+    "image": "food-images/Mojito.jpg"
+  },
+  {
+    "id": 31,
+    "category": "Drinks",
+    "name": "Matcha Vietnamese Coffee",
+    "description": "Vietnamese Coffee infused with fresh matcha",
+    "price": 5.75,
+    "image": "food-images/Matcha-Vietnamese-Coffee.jpg"
+  },
+  {
+    "id": 32,
+    "category": "Drinks",
+    "name": "Vietnamese Iced Coffee",
+    "description": "Slow dripped Vietnamese Coffee with condensed milk",
+    "price": 5.75,
+    "image": "food-images/Vietnamese-Iced-Coffee.jpg"
+  },
+  {
+    "id": 33,
+    "category": "Drinks",
+    "name": "Thai Tea",
+    "description": "Sweetened ceylon tea with half & half",
+    "price": 5.25,
+    "image": "food-images/Thai-Tea.jpg"
+  },
+  {
+    "id": 34,
+    "category": "Drinks",
+    "name": "Strawberry Peach Black Tea",
+    "description": "Strawberry & peach infused black tea",
+    "price": 5.99,
+    "image": "food-images/Strawberry-Peach-Black-Tea.jpg"
+  }
+]
