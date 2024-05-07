@@ -1,0 +1,7 @@
+CREATE TABLE Transaction (
+    TransactionID INT AUTO_INCREMENT PRIMARY KEY,
+    UserID INT,
+    Date DATETIME,
+    Total DECIMAL(10, 2),
+    FOREIGN KEY (UserID) REFERENCES Customer(CustomerID)
+);

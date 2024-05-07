@@ -35,7 +35,7 @@ orderConfirmedRouter.post("/order-confirmed", (req, res) => {
                   `<li>${item.name} $${item.price} | qty: ${item.quantity}</li>`
               )}
               <br>
-              <p><b>Total:</b> $${data.total}</p>
+              <p><b>Total:</b> $${data.total.toFixed(2)}</p>
             </ul>
             <h3>Message</h3>
             <p>Thank You! See You Again!</p>`,
