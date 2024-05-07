@@ -5,5 +5,5 @@ CREATE TABLE Receipt (
     id INT,
     Quantity INT,
     FOREIGN KEY (TransactionID) REFERENCES Transaction(TransactionID),
-    FOREIGN KEY (ItemID) REFERENCES Menu(id)
+    FOREIGN KEY (id) REFERENCES Menu(id)
 );
