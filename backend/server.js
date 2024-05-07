@@ -1,8 +1,9 @@
 import bodyParser from "body-parser";
 import express from "express";
-import menuRouter from "./route/menuRoute.js";
+import jsonMenuRouter from "./route/jsonMenuRoute.js";
 import orderConfirmedRouter from "./route/orderConfirmedRoute.js";
 import cors from "cors";
+import mysqlRouter from "./route/mysqlRoute.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -18,8 +19,9 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/", menuRouter);
+app.use("/", jsonMenuRouter);
 app.use("/", orderConfirmedRouter);
+app.use("/", mysqlRouter);
 
 app.use((req, res) => {
   if (req.method === "OPTIONS") {

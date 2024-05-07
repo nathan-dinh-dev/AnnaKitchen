@@ -31,20 +31,31 @@ const Checkout = () => {
     const id = toast.loading("Sending Order...");
     const fd = new FormData(event.target);
 
-    let customerData = Object.fromEntries(fd.entries());
+    let customerData;
 
-    if (accountCtx.user)
+    if (accountCtx.user) {
       customerData = {
+        id: accountCtx.user.uid,
         name: accountCtx.user.displayName,
         email: accountCtx.user.email,
       };
+    } else {
+      customerData = Object.fromEntries(fd.entries());
+      customerData.id = null;
+    }
 
     try {
-      const url = "http://localhost:5000/order-confirmed";
+      let transID = await axios.get("http://localhost:5000/largest-trans-id");
+      const orderConfirmUrl = "http://localhost:5000/order-confirmed";
+      const databaseTransactionUrl = "http://localhost:5000/transaction";
+
+      if (!transID.data) transID = 1;
+      else transID = transID.data.TransactionID + 1;
+
       const data = {
         order: {
           customer: customerData,
-          transaction: cartTotal,
+          transaction: transID,
           items: ctx.items,
           total: cartTotal,
         },
@@ -52,10 +63,11 @@ const Checkout = () => {
       // Specifying headers in the config object
       const config = { "content-type": "application/json" };
 
-      const response = await axios.post(url, data, config);
-      console.log(response.data);
+      const response1 = await axios.post(orderConfirmUrl, data, config);
 
-      if (response.status === 200) {
+      const response2 = await axios.post(databaseTransactionUrl, data, config);
+
+      if (response1.status === 200 && response2.status === 200) {
         toast.update(id, {
           render: "Order Confirmed!",
           type: "success",
