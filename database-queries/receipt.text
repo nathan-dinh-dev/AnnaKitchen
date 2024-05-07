@@ -2,8 +2,8 @@
 CREATE TABLE Receipt (
     ReceiptID INT AUTO_INCREMENT PRIMARY KEY,
     TransactionID INT,
-    ItemID INT,
+    id INT,
     Quantity INT,
     FOREIGN KEY (TransactionID) REFERENCES Transaction(TransactionID),
-    FOREIGN KEY (ItemID) REFERENCES Menu(ItemID)
+    FOREIGN KEY (id) REFERENCES Menu(id)
 );
