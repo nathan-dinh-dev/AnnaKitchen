@@ -109,3 +109,7 @@ RENAME COLUMN ItemName TO name,
 RENAME COLUMN Description TO description,
 RENAME COLUMN Price TO price,
 RENAME COLUMN Image TO image;
+
+use Prj;
+ALTER TABLE receipt
+RENAME COLUMN ItemID TO id;
