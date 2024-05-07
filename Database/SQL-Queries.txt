@@ -99,3 +99,13 @@ CREATE TABLE Receipt (
     FOREIGN KEY (TransactionID) REFERENCES Transaction(TransactionID),
     FOREIGN KEY (ItemID) REFERENCES Menu(ItemID)
 );
+
+/* Change the name of column to fit with database*/
+use Prj;
+ALTER TABLE menu
+RENAME COLUMN ItemID TO id,
+RENAME COLUMN Category TO category,
+RENAME COLUMN ItemName TO name,
+RENAME COLUMN Description TO description,
+RENAME COLUMN Price TO price,
+RENAME COLUMN Image TO image;
