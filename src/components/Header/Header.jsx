@@ -24,6 +24,7 @@ const Header = () => {
   };
 
   const logoutHandler = () => {
+    naivigate("/");
     accountCtx.processDataInput(null, "logout");
   };
 

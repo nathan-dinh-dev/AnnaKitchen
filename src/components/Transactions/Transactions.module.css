@@ -1,0 +1,55 @@
+.transactions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url("./transaction-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.transaction-container-dimension-adjust {
+  margin-top: -20rem;
+  width: 70%;
+  max-width: 40rem;
+  max-height: 44rem;
+  overflow: auto;
+}
+
+.title {
+  text-align: center;
+  font-size: larger;
+  color: #4d4535;
+}
+
+.transaction-table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  max-height: 5rem;
+  color: #4d4535;
+}
+
+.transaction-table td,
+.transaction-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.transaction-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.transaction-table tr:hover {
+  background-color: #ddd;
+}
+
+.transaction-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #04aa6d;
+  color: white;
+}
