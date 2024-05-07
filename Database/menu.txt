@@ -7,3 +7,17 @@ CREATE TABLE Menu (
     Image VARCHAR(255)
     /*Image BLOB*/
 );
+
+
+//Change to fit database of Nathan
+
+CREATE TABLE Menu (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    category VARCHAR(50),
+    name VARCHAR(100),
+    description TEXT,
+    price DECIMAL(10, 2),
+    image VARCHAR(255)
+    /*image BLOB*/
+);
+
