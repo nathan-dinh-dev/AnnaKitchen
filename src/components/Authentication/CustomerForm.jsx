@@ -3,6 +3,9 @@ import Input from "../UI/Input";
 import Button from "../UI/Button.jsx";
 import { useContext, useState } from "react";
 import AccountContext from "../../store/AccountContext.jsx";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const CustomerForm = () => {
   const ctx = useContext(AccountContext);
@@ -60,7 +63,7 @@ const CustomerForm = () => {
 
         {!isLogin ? (
           <div className={styles["form-group"]}>
-            {/* <i className={styles["bx bxs-user"]}></i> */}
+            <FontAwesomeIcon icon={faUser} />
             <Input
               type="text"
               className={styles["form-input"]}
@@ -92,14 +95,19 @@ const CustomerForm = () => {
             onChange={passwordInputHandler}
             value={userInput.password}
           />
-          {/* <i class="fas fa-eye" id="togglePassword"></i> */}
         </div>
 
         <div className={styles["form__signup"]}>
           <p onClick={toggleSignInHandler}>
-            {isLogin
-              ? "New Customer? Please Sign Up"
-              : "Already have an account? Sign In"}{" "}
+            {isLogin ? (
+              <span>
+                New Customer? Please <b>Sign Up</b>
+              </span>
+            ) : (
+              <span>
+                Already have an account? <b>Sign In</b>
+              </span>
+            )}{" "}
           </p>
         </div>
 
@@ -115,8 +123,12 @@ const CustomerForm = () => {
               OathLoginHandler("google");
             }}
           >
-            <i class="fab fa-google"></i> {isLogin ? "Login" : "Sign up"} with
-            Google
+            <FontAwesomeIcon
+              icon={faGoogle}
+              bounce
+              style={{ marginRight: "1rem" }}
+            />
+            {isLogin ? "Login" : "Sign up"} with Google
           </Button>
 
           <Button
@@ -126,8 +138,12 @@ const CustomerForm = () => {
               OathLoginHandler("github");
             }}
           >
-            <i class="fab fa-github"></i> {isLogin ? "Login" : "Sign up"} with
-            GitHub
+            <FontAwesomeIcon
+              icon={faGithub}
+              bounce
+              style={{ marginRight: "1rem" }}
+            />
+            {isLogin ? "Login" : "Sign up"} with GitHub
           </Button>
         </div>
       </form>

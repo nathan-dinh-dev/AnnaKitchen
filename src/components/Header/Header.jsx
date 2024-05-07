@@ -6,6 +6,8 @@ import { useContext, useState } from "react";
 import UserProgressContext from "../../store/UserProgressContext.jsx";
 import { Link, useNavigate } from "react-router-dom";
 import AccountContext from "../../store/AccountContext.jsx";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const naivigate = useNavigate();
@@ -88,7 +90,13 @@ const Header = () => {
           buttonDisplayName
         ) : (
           <Link to="/login">
-            <Button textOnly>Account</Button>
+            <Button textOnly>
+              <FontAwesomeIcon
+                icon={faUser}
+                style={{ padding: "0 0.3rem", width: "17px" }}
+              />
+              Account
+            </Button>
           </Link>
         )}
       </nav>

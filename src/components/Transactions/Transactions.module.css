@@ -13,10 +13,12 @@
   margin-top: -20rem;
   width: 70%;
   max-width: 40rem;
-  max-height: 44rem;
-  overflow: auto;
 }
 
+.overflow-table {
+  max-height: 25rem;
+  overflow: auto;
+}
 .title {
   text-align: center;
   font-size: larger;

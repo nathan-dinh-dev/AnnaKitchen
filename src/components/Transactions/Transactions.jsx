@@ -33,26 +33,27 @@ const Transactions = () => {
         <div className={styles.title}>
           <h1>Order History</h1>
         </div>
-
-        <table className={styles["transaction-table"]}>
-          <thead>
-            <tr>
-              <th>Transaction ID</th>
-              <th>Total</th>
-              <th>Date & Time</th>
-            </tr>
-          </thead>
-          <tbody>
-            {transArr.map((trans, id) => (
-              <TransactionItem
-                key={id}
-                transID={trans.TransactionID}
-                date={trans.Date}
-                total={trans.Total}
-              />
-            ))}
-          </tbody>
-        </table>
+        <div className={styles["overflow-table"]}>
+          <table className={styles["transaction-table"]}>
+            <thead>
+              <tr>
+                <th>Transaction ID</th>
+                <th>Total</th>
+                <th>Date & Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              {transArr.map((trans, id) => (
+                <TransactionItem
+                  key={id}
+                  transID={trans.TransactionID}
+                  date={trans.Date}
+                  total={trans.Total}
+                />
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

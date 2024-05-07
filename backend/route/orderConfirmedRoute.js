@@ -14,14 +14,14 @@ orderConfirmedRouter.post("/order-confirmed", (req, res) => {
   let smtpTransporter = nodemailer.createTransport({
     service: "Gmail",
     port: 465,
-    secure: true,
+    // secure: true,
     auth: {
       user: "nathanxdinhx97@gmail.com",
       pass: process.env.GMAIL_APP_PASSWORD,
     },
-    tls: {
-      rejectUnauthorized: false,
-    },
+    // tls: {
+    //   rejectUnauthorized: false,
+    // },
   });
 
   let mailOptions = {

@@ -83,6 +83,8 @@ export const AccountContextProvider = ({ children }) => {
           // The signed-in user info.
           const user = result.user;
           setCurrentUser(user);
+          toast.success("Login successfully!");
+
           console.log("Google User: ", user);
         } catch (error) {
           // Handle Errors here.
@@ -104,6 +106,7 @@ export const AccountContextProvider = ({ children }) => {
           // The signed-in user info.
           const user = result.user;
           setCurrentUser(user);
+          toast.success("Login successfully!");
 
           console.log("Github User: ", user);
         } catch (error) {
@@ -129,6 +132,7 @@ export const AccountContextProvider = ({ children }) => {
           // The signed-in user info.
           const user = result.user;
           setCurrentUser(user);
+          toast.success("Login successfully!");
 
           console.log("Facebook User: ", user);
         } catch (error) {

@@ -14,6 +14,7 @@ const Checkout = () => {
   const ctx = useContext(CartContext);
   const userProgressCtx = useContext(UserProgressContext);
   const accountCtx = useContext(AccountContext);
+  const [transactionId, settransactionId] = useState();
 
   const [orderType, setOrderType] = useState("pickup");
 
@@ -49,8 +50,11 @@ const Checkout = () => {
       const orderConfirmUrl = "http://localhost:5000/order-confirmed";
       const databaseTransactionUrl = "http://localhost:5000/transaction";
 
-      if (!transID.data) transID = 1;
-      else transID = transID.data.TransactionID + 1;
+      if (!transID.data) {
+        transID = 1;
+      } else {
+        transID = transID.data.data[0].TransactionID + 1;
+      }
 
       const data = {
         order: {

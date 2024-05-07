@@ -50,6 +50,19 @@
   color: #0b0707;
 }
 
+.form__signup p {
+  color: black;
+}
+
+.form__signup b {
+  cursor: pointer;
+  transition: all 1ms;
+}
+
+.form__signup b:hover {
+  color: green;
+}
+
 .form-actions {
   margin-top: 1rem;
   display: flex;
