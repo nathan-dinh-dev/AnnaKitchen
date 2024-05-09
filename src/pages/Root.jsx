@@ -8,10 +8,14 @@ const RootLayout = () => {
     <>
       <Header />
       <ToastContainer
+        position="top-right"
+        hideProgressBar={false}
+        newestOnTop={false}
         theme="colored"
-        autoClose={800}
+        autoClose={1200}
         pauseOnFocusLoss={false}
-        pauseOnHover={false}
+        pauseOnHover={true}
+        style={{ top: "3.5rem" }}
       />
       <main>
         <Outlet />

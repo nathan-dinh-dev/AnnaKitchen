@@ -162,10 +162,12 @@ export const AccountContextProvider = ({ children }) => {
 
   useEffect(() => {
     navigate("/");
+
+    // Auto logout after 30 mins
     // setTimeout(() => {
     //   auth.signOut();
     //   setCurrentUser(null);
-    // }, 3000);
+    // }, 1800000);
   }, [currentUser]);
 
   const accountContext = {

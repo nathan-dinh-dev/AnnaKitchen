@@ -5,7 +5,7 @@ import { useContext, useState } from "react";
 import AccountContext from "../../store/AccountContext.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faFireFlameCurved } from "@fortawesome/free-solid-svg-icons";
 
 const CustomerForm = () => {
   const ctx = useContext(AccountContext);
@@ -63,7 +63,6 @@ const CustomerForm = () => {
 
         {!isLogin ? (
           <div className={styles["form-group"]}>
-            <FontAwesomeIcon icon={faUser} />
             <Input
               type="text"
               className={styles["form-input"]}
@@ -76,7 +75,6 @@ const CustomerForm = () => {
           ""
         )}
         <div className={styles["form-group"]}>
-          {/* <i className={styles["bx bxs-user"]}></i> */}
           <Input
             type="text"
             className={styles["form-input"]}
@@ -87,7 +85,6 @@ const CustomerForm = () => {
         </div>
 
         <div className={styles["form-group"]}>
-          {/* <i className="bx bxs-key"></i> */}
           <Input
             type="password"
             className={styles["form-input"]}
@@ -113,7 +110,17 @@ const CustomerForm = () => {
 
         <div className={styles["form-actions"]}>
           <Button className={styles["button-login"]}>
+            <FontAwesomeIcon
+              icon={faFireFlameCurved}
+              bounce
+              style={{ marginRight: "1rem" }}
+            />
             {isLogin ? "Login" : "Sign up"}
+            <FontAwesomeIcon
+              icon={faFireFlameCurved}
+              bounce
+              style={{ marginLeft: "1rem" }}
+            />
           </Button>
 
           <Button
@@ -129,6 +136,11 @@ const CustomerForm = () => {
               style={{ marginRight: "1rem" }}
             />
             {isLogin ? "Login" : "Sign up"} with Google
+            <FontAwesomeIcon
+              icon={faGoogle}
+              bounce
+              style={{ marginLeft: "1rem" }}
+            />
           </Button>
 
           <Button
@@ -144,6 +156,11 @@ const CustomerForm = () => {
               style={{ marginRight: "1rem" }}
             />
             {isLogin ? "Login" : "Sign up"} with GitHub
+            <FontAwesomeIcon
+              icon={faGithub}
+              bounce
+              style={{ marginLeft: "1rem" }}
+            />
           </Button>
         </div>
       </form>

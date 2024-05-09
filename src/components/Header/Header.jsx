@@ -2,20 +2,22 @@ import styles from "./Header.module.css";
 import brand from "/brand.png";
 import Button from "../UI/Button.jsx";
 import CartContext from "../../store/CartContext.jsx";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import UserProgressContext from "../../store/UserProgressContext.jsx";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import AccountContext from "../../store/AccountContext.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const naivigate = useNavigate();
+  const location = useLocation().pathname;
   const ctx = useContext(CartContext);
   const userProgressCtx = useContext(UserProgressContext);
   const accountCtx = useContext(AccountContext);
-
+  const [isShrinked, setIsShrinked] = useState(false);
   const [isDropdown, setIsDropdown] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(false);
 
   const totalCartItems = ctx.items.reduce((totalNumberOfItems, item) => {
     return totalNumberOfItems + item.quantity;
@@ -75,15 +77,56 @@ const Header = () => {
       </div>
     );
   }
+
+  const scrollFunction = () => {
+    setIsShrinked(window.scrollY > 100);
+  };
+
+  useEffect(() => {
+    if (typeof window !== undefined && location === "/") {
+      window.addEventListener("scroll", scrollFunction);
+    }
+
+    if (location === "/") {
+      setIsShrinked(false);
+      setIsDisabled(false);
+    } else {
+      setIsShrinked(true);
+      setIsDisabled(true);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", scrollFunction);
+    };
+  }, [location]);
+
   return (
-    <header className={styles["header"]}>
-      <div className={styles["header__title"]} onClick={() => naivigate("/")}>
+    <header
+      className={`${styles["header"]} ${isShrinked ? styles["scroll"] : ""}`}
+    >
+      <div
+        className={`${styles["header__title"]} ${
+          isShrinked ? styles["scroll-title"] : ""
+        }`}
+        onClick={() => {
+          if (location !== "/") {
+            naivigate("/");
+            setIsDisabled(false);
+            setIsShrinked(false);
+          }
+          setIsDisabled(false);
+        }}
+      >
         <img src={brand} alt="Anna's" />
         <h1>Anna's Kitchen</h1>
       </div>
 
-      <nav>
-        <Button textOnly onClick={showCartHandler}>
+      <nav className={isShrinked ? styles["scroll-nav"] : ""}>
+        <Button
+          textOnly
+          onClick={showCartHandler}
+          className={isDisabled ? styles.disabled : ""}
+        >
           Cart ({totalCartItems})
         </Button>
         {accountCtx.user ? (

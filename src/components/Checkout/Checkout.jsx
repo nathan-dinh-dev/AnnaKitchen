@@ -9,12 +9,12 @@ import styles from "./Checkout.module.css";
 import axios from "axios";
 import { toast } from "react-toastify";
 import AccountContext from "../../store/AccountContext.jsx";
+import { loadStripe } from "@stripe/stripe-js";
 
 const Checkout = () => {
   const ctx = useContext(CartContext);
   const userProgressCtx = useContext(UserProgressContext);
   const accountCtx = useContext(AccountContext);
-  const [transactionId, settransactionId] = useState();
 
   const [orderType, setOrderType] = useState("pickup");
 
@@ -97,6 +97,8 @@ const Checkout = () => {
       });
       console.log(error);
     }
+
+    makePayment();
   };
 
   const orderTypeHandler = (event) => {
@@ -110,6 +112,27 @@ const Checkout = () => {
   const autofilledEmail = accountCtx.user
     ? { value: accountCtx.user.email, disabled: true }
     : "";
+
+  const makePayment = async () => {
+    const apiUrl = "http://localhost:5000/create-checkout-session";
+    const stripe = await loadStripe(
+      "pk_test_51PCzZ52MTF0cNn53zebZLUYQfDFtumEi3SPO7oRYPDluSmUnAOqKlSnzuaR3AXkktErlHGND8awWjYrl0hgaS6jV00neTLxD10"
+    );
+
+    const body = {
+      products: ctx.items,
+    };
+
+    const config = { "content-type": "application/json" };
+
+    const response = await axios.post(apiUrl, body, config);
+
+    const result = stripe.redirectToCheckout({
+      sessionId: response.data.id,
+    });
+
+    console.log(result);
+  };
 
   return (
     <Modal

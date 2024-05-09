@@ -7,6 +7,7 @@ import { CartContextProvider } from "./store/CartContext.jsx";
 import { UserProgressContextProvider } from "./store/UserProgressContext.jsx";
 import { AccountContextProvider } from "./store/AccountContext.jsx";
 import TransactionHistory from "./pages/TransactionHistory.jsx";
+import SuccessPage from "./pages/SuccessPayment.jsx";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
       { path: "/my-transactions", element: <TransactionHistory /> },
     ],
   },
+  { path: "/success-payment", element: <SuccessPage /> },
 ]);
 
 function App() {

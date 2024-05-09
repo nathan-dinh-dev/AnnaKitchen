@@ -1,9 +1,10 @@
 import bodyParser from "body-parser";
 import express from "express";
 import jsonMenuRouter from "./route/jsonMenuRoute.js";
-import orderConfirmedRouter from "./route/orderConfirmedRoute.js";
+import orderConfirmedRouter from "./route/emailConfirmedRoute.js";
 import cors from "cors";
 import mysqlRouter from "./route/mysqlRoute.js";
+import stripeRoute from "./route/stripePaymentRoute.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -22,6 +23,7 @@ app.use((req, res, next) => {
 app.use("/", jsonMenuRouter);
 app.use("/", orderConfirmedRouter);
 app.use("/", mysqlRouter);
+app.use("/", stripeRoute);
 
 app.use((req, res) => {
   if (req.method === "OPTIONS") {
