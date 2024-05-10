@@ -8,6 +8,7 @@ import {
   GoogleAuthProvider,
   GithubAuthProvider,
   FacebookAuthProvider,
+  updateProfile,
 } from "firebase/auth";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
@@ -32,7 +33,9 @@ export const AccountContextProvider = ({ children }) => {
             userData.password
           );
           const user = userSignupCredential.user;
-          user.displayName = userData.name;
+          const updateNameResult = await updateProfile(auth.currentUser, {
+            displayName: userData.name,
+          });
 
           const sendVerificationEmail = await sendEmailVerification(
             auth.currentUser
