@@ -8,6 +8,7 @@
   width: 100%;
   background: rgba(241, 160, 7, 0.3);
   transition: all 0.3s ease-in-out;
+  z-index: 10;
 }
 
 .header.scroll {
