@@ -9,13 +9,12 @@ const stripeRoute = express.Router();
 stripeRoute.post("/create-checkout-session", async (req, res) => {
   const { products } = req.body;
 
-  console.log(products[0].name + products[0].price + products[0].quantity);
-
   const lineItems = products.map((product) => ({
     price_data: {
       currency: "usd",
       product_data: {
         name: product.name,
+        // images: [product.images]
       },
       unit_amount: Math.round(product.price * 100),
     },

@@ -79,7 +79,7 @@ const Header = () => {
   }
 
   const scrollFunction = () => {
-    setIsShrinked(window.scrollY > 100);
+    setIsShrinked(window.scrollY > 25);
   };
 
   useEffect(() => {

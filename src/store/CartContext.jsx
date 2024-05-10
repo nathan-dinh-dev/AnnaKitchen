@@ -1,4 +1,5 @@
 import { createContext, useReducer } from "react";
+import toast from "react-hot-toast";
 
 const CartContext = createContext({
   items: [],
@@ -26,7 +27,7 @@ const cartReducer = (state, action) => {
     } else {
       updatedItems.push({ ...action.item, quantity: 1 });
     }
-
+    toast.success("Added to your cart");
     return { ...state, items: updatedItems };
   }
 
@@ -47,6 +48,7 @@ const cartReducer = (state, action) => {
       };
       updatedItems[existingCartItemIndex] = updatedItem;
     }
+    toast.success("Item removed");
 
     return { ...state, items: updatedItems };
   }
